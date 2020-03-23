@@ -32,8 +32,13 @@ class PostTemplateDetails extends React.Component {
       </div>
     )
 
-    const commentsBlock = <div />
-
+    const commentsBlock = (
+      <div>
+        <hr />
+        <h2>Comments</h2>
+        <p>No comments yet.</p>
+      </div>
+    )
     return (
       <div>
         {homeBlock}
@@ -52,6 +57,7 @@ class PostTemplateDetails extends React.Component {
           </div>
           <div className="post-single__footer">
             {tagsBlock}
+            {commentsBlock}
             <hr />
             <p className="post-single__footer-text">
               {subtitle}
@@ -63,7 +69,6 @@ class PostTemplateDetails extends React.Component {
                 <br /> <strong>{author.name}</strong> on Twitter
               </a>
             </p>
-            {commentsBlock}
           </div>
         </div>
       </div>
